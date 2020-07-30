@@ -8,7 +8,7 @@ module.exports = templateData => {
 
     ## Description 
 
-    
+    ${templateData.description}
 
     ## Table of Contents
 
@@ -23,32 +23,32 @@ module.exports = templateData => {
 
     To install all of the necessary dependencies, run the following command in tour favorite command line tool:
 
-    ----INSTALL----
+    ${templateData.install}
 
     ## Usage 
 
     Instructions for use:
 
-    ----USAGE----
+    ${templateData.usage}
 
     ## License
 
-    This project uses the ----LICENSE---- license.
+    This project uses the ${templateData.license} license.
 
     ## Contributing
 
     If you would like to contribute to the repo, keep the following in mind:
     
-    ----USERINFO----
+    ${templateData.userInfo}
 
     ## Tests
 
     To run tests, run the following command in your favorite command line tool:
 
-    ----TEST----
+    ${templateData.test}
 
     ## Questions
 
-    If you have any questions, open an issue in the repo or contact me directly at ----EMAIL----. You can find more of my work at [----GITHUBNAME----](https://github.com/GITHUBNAME).
+    If you have any questions, open an issue in the repo or contact me directly at ${templateData.email}. You can find more of my work at [${templateData.githubName}](https://github.com/${templateData.githubName}).
     `    
 }
