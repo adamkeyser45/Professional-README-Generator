@@ -1,3 +1,4 @@
+const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
@@ -48,6 +49,19 @@ const questions = [
         message: 'Please write a short description of your project.'
     },
     {
+        type: 'input',
+        name: 'usage',
+        message: 'Please write a short description of how to use your project. (Required)',
+        validate: usageInput => {
+            if (usageInput) {
+                return true;
+            } else {
+                console.log('Please describe how to use your project!');
+                return false;
+            }
+        }
+    },
+    {
         type: 'list',
         name: 'license',
         message: 'Please choose a license for your project.',
@@ -92,8 +106,11 @@ const questions = [
 ];
 
 // function to write README file
-const writeToFile = (fileName, data) => {
-
+const writeToFile = data => {
+    fs.writeFile('./README.md', data, err => {
+        if (err) throw err;
+        console.log('Your README has been created! Be sure to check it out!');
+    });
 };
 
 // function to initialize program
@@ -104,7 +121,10 @@ const init = () => {
 // function call to initialize program
 init()
     .then(userAnswers => {
-        console.log(userAnswers);
+        return generateMarkdown(userAnswers);
+    })
+    .then(completeTemplate => {
+        return writeToFile(completeTemplate);
     })
     .catch(err => {
         console.log(err);
