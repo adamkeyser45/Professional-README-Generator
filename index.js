@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // array of questions for user
 const questions = [
@@ -71,7 +71,7 @@ const questions = [
         name: 'test',
         message: 'What command should be run to run tests? (Required)',
         validate: testInput => {
-            if (testlInput) {
+            if (testInput) {
                 return true;
             } else {
                 console.log('Please type in a command to run tests!');
@@ -92,13 +92,20 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
-}
+const writeToFile = (fileName, data) => {
+
+};
 
 // function to initialize program
-function init() {
-
-}
+const init = () => {
+    return inquirer.prompt(questions);
+};
 
 // function call to initialize program
-init();
+init()
+    .then(userAnswers => {
+        console.log(userAnswers);
+    })
+    .catch(err => {
+        console.log(err);
+    });
