@@ -46,7 +46,15 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Please write a short description of your project.'
+        message: 'Please write a short description of your project.',
+        validate: descriptionInput => {
+            if (descriptionInput) {
+                return true;
+            } else {
+                console.log('Please write a short description!');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
@@ -96,12 +104,28 @@ const questions = [
     {
         type: 'input',
         name: 'userInfo',
-        message: 'What does the user need to know about using the repo?'
+        message: 'What does the user need to know about using the repo?',
+        validate: userInfoInput => {
+            if (userInfoInput) {
+                return true;
+            } else {
+                console.log('Please explain what a user should know about your repo!');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'contributeInfo',
-        message: 'What does the user need to know about contributing to the repo?'
+        message: 'What does the user need to know about contributing to the repo?',
+        validate: contributeInfoInput => {
+            if (contributeInfoInput) {
+                return true;
+            } else {
+                console.log('Please explain what a user should know about contributing!');
+                return false;
+            }
+        }
     }    
 ];
 
