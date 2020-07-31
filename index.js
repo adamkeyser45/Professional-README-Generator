@@ -65,7 +65,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Please choose a license for your project.',
-        choices: ['None', 'MIT', 'Mozilla', 'The Unlicense', 'Apache', 'GNU General', 'GNU Affero', 'GNU Lesser' ]
+        choices: ['MIT', 'Mozilla', 'The Unlicense', 'Apache', 'GNU General' ]
     },
     {
         type: 'input',
@@ -107,7 +107,7 @@ const questions = [
 
 // function to write README file
 const writeToFile = data => {
-    fs.writeFile('./README.md', data, err => {
+    fs.writeFile('./newREADME.md', data, err => {
         if (err) throw err;
         console.log('Your README has been created! Be sure to check it out!');
     });
@@ -115,6 +115,7 @@ const writeToFile = data => {
 
 // function to initialize program
 const init = () => {
+    console.log('Welcome to the README Generator! Follow the prompts to make your README. All questions are required.')
     return inquirer.prompt(questions);
 };
 
