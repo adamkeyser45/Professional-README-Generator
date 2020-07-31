@@ -7,7 +7,7 @@ const questions = [
     {
         type: 'input',
         name: 'githubName',
-        message: 'What is your Github Username? (Required)',
+        message: 'What is your Github Username?',
         validate: gitHubNameInput => {
             if (gitHubNameInput) {
                 return true;
@@ -20,7 +20,7 @@ const questions = [
     {
         type: 'input',
         name: 'email',
-        message: 'What is your email address? (Required)',
+        message: 'What is your email address?',
         validate: emailInput => {
             if (emailInput) {
                 return true;
@@ -33,7 +33,7 @@ const questions = [
     {
         type: 'input',
         name: 'projectName',
-        message: 'What is the name of your project? (Required)',
+        message: 'What is the name of your project?',
         validate: projectNameInput => {
             if (projectNameInput) {
                 return true;
@@ -51,7 +51,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Please write a short description of how to use your project. (Required)',
+        message: 'Please write a short description of how to use your project.',
         validate: usageInput => {
             if (usageInput) {
                 return true;
@@ -70,7 +70,7 @@ const questions = [
     {
         type: 'input',
         name: 'install',
-        message: 'What command should be run to install dependencies? (Required)',
+        message: 'What command should be run to install dependencies?',
         validate: installInput => {
             if (installInput) {
                 return true;
@@ -83,7 +83,7 @@ const questions = [
     {
         type: 'input',
         name: 'test',
-        message: 'What command should be run to run tests? (Required)',
+        message: 'What command should be run to run tests?',
         validate: testInput => {
             if (testInput) {
                 return true;

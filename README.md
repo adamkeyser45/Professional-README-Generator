@@ -1,48 +1,11 @@
+# mod9challenge
+A README.md generator that takes user NODE.js to take user input and plug it into a README template.
 
-  # Generate a README
+## Description: 
+This project uses Node.js and the Inquirer dependency to generate a README.md file when the user types in commands into the command line. TO start the program, the user must first install the required dependencies, and type in node index.js in the root directory. Then the user will need to follow the prompts on the page and type in the correct information. When all of the prompts are answered, it will create a file called newREADME.md that will have all of the user's information plugged in!
 
-  ## Description 
+## Screenshot of Webpage
+![Sreenshot of Webpage](./assets/images/screenshot_of_page.png)
 
-  This project generates a README.md file after answering questions from the command line.
-
-  ## Table of Contents
-
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [License](#license)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [Questions](#questions)
-
-  ## Installation
-
-  To install all of the necessary dependencies, run the following command in tour favorite command line tool:
-
-  npm install inquirer
-
-  ## Usage 
-
-  Instructions for use:
-
-  Type in node index.js and follow the commands in the command line.
-
-  ## License
-
-  This project uses the MIT license.
-
-  ## Contributing
-
-  If you would like to contribute to the repo, keep the following in mind:
-  
-  Please only add to things if you know what you are doing.
-
-  ## Tests
-
-  To run tests, run the following command in your favorite command line tool:
-
-  run tests
-
-  ## Questions
-
-  If you have any questions, open an issue in the repo or contact me directly at adam.keyser45@gmail.com. You can find more of my work at [adamkeyser45](https://github.com/adamkeyser45).
-  
+## About the Project:
+The program heavily relies on the Inquirer dependency. If it is not installed properly, the program will not work. After typing in the run command, each prompt will validate their answer and place the response in an object. This data will be returned to the promise chain at the bottom of the code in the index.js file. It then sends the data to the generateMardown.js file, where it will then plug in all of the relevant data into the README template. This template is then sent to the writeToFile() function where it uses the file system to write the file using the information given. The file, called "newREADME.md" is then created in the root directory of the project.
