@@ -1,11 +1,11 @@
 
-  # README Generator!
+  # README Generator
 
   [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
   ## Description 
 
-  This project uses NODE.js to create a README file using nothing but the command line!
+  The README Generator is a program that is run on the command line, using Node.js. It asks the user questions to generate a new README.md file.
 
   ## Table of Contents
 
@@ -18,7 +18,7 @@
 
   ## Installation
 
-  To install all of the necessary dependencies, run the following command in tour favorite command line tool:
+  To install all of the necessary dependencies, run the following command in your favorite command line tool:
 
   npm install inquirer
 
@@ -26,7 +26,7 @@
 
   Instructions for use:
 
-  Just type in node index.js in the root folder and follow the prompts!
+  After navigating to the root folder, you should type in "node index.js" and follow the prompts on the screen.
 
   ## License
 
@@ -36,7 +36,8 @@
 
   If you would like to contribute to the repo, keep the following in mind:
   
-  Make sure that you follow all of the rules of the license.
+  Please make sure you follow the guidelines of the Mozilla License.
+  Please contact me first before contributing.
 
   ## Tests
 

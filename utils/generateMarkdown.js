@@ -41,7 +41,7 @@ function generateMarkdown(templateData) {
 
   ## Installation
 
-  To install all of the necessary dependencies, run the following command in tour favorite command line tool:
+  To install all of the necessary dependencies, run the following command in your favorite command line tool:
 
   ${templateData.install}
 
@@ -60,6 +60,7 @@ function generateMarkdown(templateData) {
   If you would like to contribute to the repo, keep the following in mind:
   
   ${templateData.userInfo}
+  ${templateData.contributeInfo}
 
   ## Tests
 
