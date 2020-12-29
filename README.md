@@ -1,4 +1,4 @@
-# mod9challenge
+# Professional README Generator
 A README.md generator that takes user NODE.js to take user input and plug it into a README template.
 
 ## Description: 
